@@ -50,10 +50,18 @@ function Login() {
               required
             />
           </div>
+
+          {/* Botão de recuperação de senha dentro do formulário */}
+          <Button asChild variant="link" className="text-sm">
+            <Link to="/reset-password">Esqueci a senha?</Link>
+          </Button>
+
           <Button type="submit" className="w-full">
             Entrar
           </Button>
         </form>
+
+        {/* Mantém o link abaixo do formulário para compatibilidade visual */}
         <div className="mt-4 text-center">
           <Button asChild variant="link" className="text-sm">
             <Link to="/reset-password">Esqueci a senha?</Link>
