@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,5 +16,11 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return <main className="min-h-screen bg-background" />;
+  return (
+    <main className="min-h-screen bg-background flex items-center justify-center">
+      <Button asChild>
+        <Link to="/reset-password">Recuperar senha</Link>
+      </Button>
+    </main>
+  );
 }
